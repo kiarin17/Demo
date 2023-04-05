@@ -1,9 +1,15 @@
 import React, {useState} from "react";  
+import { FaShoppingCart } from "react-icons/fa";
 import {NavLink} from "react-router-dom";
 
 /*Импорты фотографий*/
 import logo from '../images/logo.png'  
 import Order from "./Order";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
 
 
 const showOrders=(props)=>{
@@ -32,29 +38,41 @@ const showNothing = () => {
 export default function Main(props) {
   let [cartOpen, setCartOpen] = useState(false)
     return (
-        <>
-          {/*Шапка сайта */}
-          <header className="header">
+        <header>
+               <Navbar.Brand className="logo" >
+        <img src={logo}/>
+        </Navbar.Brand>
+               <Navbar className="navbar navbar-custom">
+      <Container className="header">
+        
+          <Nav className="active" >
+            <Nav.Link style={{marginRight:30}} className="amg" href="/">Главная</Nav.Link>
+            <Nav.Link style={{marginRight:30}} className="amg" href="onas">О нас</Nav.Link>
+            <Nav.Link style={{marginRight:30}} className="amg" href="catalog">Меню</Nav.Link>
+            <Nav.Link style={{marginRight:30}} className="amg" href="contact">Контакты</Nav.Link>
+            <Nav.Link style={{marginRight:30}} className="amg" href="signup">Вход</Nav.Link>
+            <Nav.Link style={{marginRight:230}} className="amg" href="bronirovanie">Бронирование</Nav.Link>
+            
+            <div style={{ marginTop:8}}>
+      <FaShoppingCart onClick={() => setCartOpen(cartOpen = !cartOpen)} className={`shop-cart-buttom ${cartOpen && 'active'}`}/>
 
-              {/*Логотип */}
-              <img className="logo" src={logo} alt="logo" />
+{cartOpen && (
+    <div className="shop-cart">
+      {props.orders.length > 0 ?
+          showOrders(props) : showNothing()}
+    </div>
+  )}
+  </div> 
+            
+          </Nav>
+             
+      </Container>
+      
+    </Navbar>
+    
 
-              {/*Панель навигации */}
-              <NavLink to="/" className="active">Главная</NavLink>
-              <NavLink to="/onas" className="active">О нас</NavLink>
-              <NavLink to="/catalog" className="active">Каталог</NavLink>
-              <NavLink to="/contact" className="active">Контакты</NavLink>
-              <NavLink to="/signup" className="active">Вход</NavLink>
-              <NavLink to="/bronirovanie" className="active">Бронирование</NavLink>
-              <NavLink to='/' onClick={() => setCartOpen(cartOpen = !cartOpen)} className={`shop ${cartOpen && 'active'}`}>Корзина</NavLink>
-
-              {cartOpen && (
-                <div className="shop-cart">
-                  {props.orders.length > 0 ?
-                      showOrders(props) : showNothing()}
-                </div>
-              )}
+              
+        
           </header>
-          </>
     )
 }

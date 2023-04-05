@@ -1,32 +1,84 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #000000;
+  overflow-x: hidden;
+  background:rgb(8, 8, 8);
+  
+    
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-.active {
-  color: #e0dcdc;
+.amg {
+  color: #fefefe;
+  
+}
+
+
+.video1{
+  width: 2600px;
+  height: 100%;
+  /* object-fit: fill; */
+}
+.navbar-custom {
+  background-color: rgb(104, 3, 3);
+  
+}
+.g{
+  width: 2550px;
+  height: 1080px;
+}
+
+.foot {
+  color: #fefefe;
   text-decoration: none;
-  padding: 12px 15px;
-  margin-top: 0px;
-  margin-left: 150px;
-  margin-right: 50px;
+  font-size: 20px;
+}
+
+.foot1 {
+  color: #fefefe;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+}
+
+.SNG{
+  background-image: url("../src/images/fbr.png");
+  background-size: 2500px 1450px;
+}
+
+
+.active {
+  position: relative;
+  text-decoration: none;
   font-size: 32px;
   font-family: 'Montserrat';
+  line-height: 50px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  
+  
+  
+  
+}
 
+.logo{
+  float: left;
+  height: 130px;
+
+}
+.shop {
+  cursor: pointer;
+  font-size: 32px;
+
+  
 }
 
 header {
   background-color: #841212;
+  
 
 }
 
@@ -46,23 +98,17 @@ header:hover {
   right: 0px;
 }
 
-.foto{
-  position: absolute;
-  width: 2540px;
-  height: 1100px;
-  left: 0px;
-  right: 0px;
-}
 
 .nazvanie {
   font-size: 64px;
   font-family: 'Montserrat';
   color:#e0dcdc;
   position: absolute;
-  top: 50%;
-  left: 65%;
+  top: 45%;
+  margin-left: 50%;
   transform: translate(-50%, -50%);
 }
+
 
 .nazvanie1 {
   font-size: 18px;
@@ -134,7 +180,7 @@ header:hover {
   padding-left: 10px;
   border-radius: 5px;
   font-family: 'Montserrat';
-  color: #000000;
+  color: #ffffff;
   font-size: 24px;
   
 
@@ -156,27 +202,43 @@ header:hover {
 
 .r{
   position: absolute;
-width: 730px;
-height: 61px;
-margin-left: 950px;
-top: 250px;
+  width: 730px;
+  height: 61px;
+  margin-left: 170px;
+  top: 250px;
 
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 700;
-font-size: 64px;
-line-height: 78px;
-text-align: center;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 78px;
+  text-align: center;
 
-color: #FFFFFF;
+  color: #FFFFFF;
+}
+.r1{
+  position: absolute;
+  width: 730px;
+  height: 61px;
+  margin-left: 1000px;
+  top: 250px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 78px;
+  text-align: center;
+
+  color: #FFFFFF;
 }
 
 .a{
   position: absolute;
 width: 730px;
 height: 61px;
-margin-left: 950px;
-top: 1250px;
+margin-left: 1600px;
+top: 226px;
 
 font-family: 'Montserrat';
 font-style: normal;
@@ -279,14 +341,13 @@ border-radius: 50px;
   width: 373px;
   height: 61px;
   margin-left: 350px;
-  top: 286px;
   background: #821111;
   border-radius: 25px;
   position: absolute;
   width: 342.8px;
   height: 45.71px;
   left: 753px;
-  top: 293.56px;
+  top: 1300px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
@@ -297,12 +358,15 @@ border-radius: 50px;
   
 }
 
+/* .registr{
+  position: relative; right: 500px;
+} */
 .karta {
   position: absolute;
   width: 1244px;
   height: 733px;
   margin-left: 650px;
-  top: 416px;
+  top: 1400px;
 }
 
 .adress{
@@ -393,7 +457,7 @@ header .shop-cart {
   top: 30px;
   right: 0;
   width: 450px;
-  background: #FFFFFF;
+  background-color: #FFFFFF;
   box-shadow: 4px 5px 15px -7px;
   z-index: 1000;
   margin-top: 10px;
@@ -404,7 +468,7 @@ header .shop-cart {
 header .shop-cart .item {
   width: 100%;
   float: left;
-  margin-bottom: 20px;
+  margin-right: 20px;
 }
 
 header .shop-cart .item img {
@@ -553,8 +617,8 @@ header .shop-cart .summa {
   position: absolute;
   width: 671px;
   height: 29px;
-  left: 990px;
-  top: 580px;
+  left: 950px;
+  top: 590px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
@@ -564,77 +628,13 @@ header .shop-cart .summa {
   color: #FFFFFF;
 }
 
-.footer{
-  background-image: url('./images/Фон.png');
-  position: relative;
-}
-
-.spletni {
-  width: 671px;
-  height: 29px;
-  font-family: 'Montserrat';
-  font-weight: 400;
-  font-size: 20px;
-  color: #FFFFFF;
-  margin-left: 1200px;
-  font-style: normal;
-  margin-top: 20px;
-}
-
-.mobile {
-  float: right;
-  margin-right: 181px;
-  
-}
-
-.adress {
-  float: left;
-  margin-left: 181px;
-}
-
-.pochta {
-  margin-left: 550px;
-}
-
-.bof {
-  background-image: url('./images/сплетни.png');
-}
-
-.me {
-  position: absolute;
-  width: 588px;
-  height: 53.11px;
-  margin-left: 350px;
-  top: 1242px;
-  width: 588px;
-  height: 53px;
-  left: 671px;
-  top: 1242px;
-  background: #821111;
-  border-radius: 25px;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 44px;
-  text-align: center;
-  color: #FFFFFF;
-  }
-
-.inst {
-  position: absolute;
-  width: 481.07px;
-  height: 107.33px;
-  margin-left: 1050px;
-  top: 1395px;
-}
 
 .contact {
   position: absolute;
   width: 294.65px;
   height: 56px;
   margin-left: 350px;
-  top: 1600px;
+  top: 2200px;
   width: 291px;
   height: 56px;
   left: 813px;
@@ -655,7 +655,7 @@ header .shop-cart .summa {
   width: 161px;
   height: 22px;
   margin-left: 400px;
-  top: 1700px;
+  top: 2300px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
@@ -676,7 +676,7 @@ header .shop-cart .summa {
   width: 268px;
   height: 24px;
   margin-left: 1250px;
-  top: 1700px;
+  top: 2300px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
@@ -692,7 +692,7 @@ header .shop-cart .summa {
   width: 124px;
   height: 21px;
   margin-left: 400px;
-  top: 1750px;
+  top: 2350px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
@@ -711,7 +711,7 @@ header .shop-cart .summa {
   width: 746px;
   height: 22px;
   margin-left: 1170px;
-  top: 1750px;
+  top: 2350px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
@@ -768,4 +768,116 @@ color: #FFFFFF;
   line-height: 22px;
   
   color: #FFFFFF;
+}
+
+.sl {
+  font-weight: 900;
+  font-size: 64px;
+  color: #fdfdfd;
+  text-shadow: 1px 1px 1px #000
+}
+
+.sl2{
+  font-size: 32px;
+  font-weight: bold;
+} 
+
+span {
+  background-color: #680503;
+}
+
+.Conta {
+  position: relative;
+    width: 1920px;
+    height: 800px;
+    margin-top: 45px;
+}
+
+.table {
+  color: #fefefe;
+ text-align: center;
+ margin-left: 200px;
+  top: 1600px;
+  width: 900px;
+  background: #821111;
+  border-radius: 25px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: #FFFFFF;
+}
+
+.tab-two{
+
+  margin-top: 620px;
+  margin-left: 620px;
+  transform: translate(-50%, -50%);
+}
+
+.Carousel {
+  width: 1920px;
+  height: 1080px;
+  margin-top: 620px;
+  margin-left: 620px;
+  transform: translate(-50%, -50%);
+}
+
+.text-center {
+  flex-shrink: 0;
+  
+}
+
+.ab1 {
+  position: absolute;
+  width: 349.25px;
+  height: 79.44px;
+  left: 363px;
+  top: 290px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 78px;
+  text-align: center;
+
+  color: #FFFFFF;
+
+  border: 2px solid #FFF4F4;
+}
+
+.ab2 {
+  position: absolute;
+  width: 605px;
+  height: 93px;
+  left: 247px;
+  top: 384px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 49px;
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+.ab3 {
+  position: absolute;
+  width: 952px;
+  height: 455px;
+  left: 117px;
+  top: 489px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: #FFFFFF;
+
 }

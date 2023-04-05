@@ -12,6 +12,7 @@ import {
   Row,
 } from "react-bootstrap";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Bronirovanie() {
   const [name, setName] = useState();
@@ -45,18 +46,21 @@ export default function Bronirovanie() {
 
   return (
     <>
+    <div  className="SNG">
+    <section>
       <Header />
-
-      <div className="r">БРОНИРОВАНИЕ</div>
-      <Container>
+      
+      
+      <div className="r1">БРОНИРОВАНИЕ</div>
+      <Container >
         <Row>
           <Col>
-            <Card>
+            <Card style={{background:"rgba(255, 255, 255, 0.07)", backdropFilter:"blur(50px)"}} >
               {/*Название формы*/}
 
               <Card.Body>
                 <Form className="form" onSubmit={reserve}>
-                  <FormGroup className="mb-3" controlId="formName">
+                  <FormGroup  className="mb-3" controlId="formName">
                     {/*Название поля ввода*/}
                     <FormLabel>Имя</FormLabel>
                     <input
@@ -107,6 +111,10 @@ export default function Bronirovanie() {
                     </FormControl.Feedback>
                   </FormGroup>
 
+                  <FormGroup  className="mb-3" controlId="formRules">
+                    
+                    </FormGroup>
+
                   <Button className="but" type="submit">
                     Отправить
                   </Button>
@@ -116,6 +124,12 @@ export default function Bronirovanie() {
           </Col>
         </Row>
       </Container>
+      </section>
+      <section style={{marginTop: 500}}>
+      <Footer />  
+      </section>
+      </div>
     </>
+    
   );
 }

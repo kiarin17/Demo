@@ -273,6 +273,11 @@ class Catalog extends React.Component {
       this.setState({orders: [...this.state.orders, item] })
     
   }
+
+
+  
 }
+
+
 
 export default Catalog;

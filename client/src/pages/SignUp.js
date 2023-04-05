@@ -13,6 +13,7 @@ import {
   Row,
 } from "react-bootstrap";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function SignUp() {
   const [firstName, setFirstName] = useState();
@@ -73,14 +74,15 @@ export default function SignUp() {
   return (
     <>
       {/*Панель навигации*/}
+      <div className="SNG"> 
       <Header />
 
       {/*Форма регистрации*/}
       <div className="r">РЕГИСТРАЦИЯ</div>
-      <Container>
+      <Container  style={{float:"left", width:"1100px" }}>
         <Row>
           <Col>
-            <Card>
+            <Card style={{background:"rgba(255, 255, 255, 0.07)", backdropFilter:"blur(50px)"}}>
               {/*Название формы*/}
               <Card.Body>
                 <Form onSubmit={signUp} className="form">
@@ -185,7 +187,7 @@ export default function SignUp() {
                       label="Согласие с правилами регистрации"
                     ></Form.Check>
                   </FormGroup>
-                  <Button className="but" type="submit">
+                  <Button style={{borderRadius:"50px"}} className="but" type="submit">
                     Регистрация
                   </Button>
                 </Form>
@@ -197,10 +199,10 @@ export default function SignUp() {
 
       {/*Форма авторизации*/}
       <div className="a">АВТОРИЗАЦИЯ</div>
-      <Container>
+      <Container style={{float:"right", width:"1100px"}}>
         <Row>
           <Col>
-            <Card>
+            <Card style={{background:"rgba(255, 255, 255, 0.01)", backdropFilter:"blur(50px)"}} >
               {/*Название формы*/}
               <Card.Body>
                 <Form className="form" onSubmit={signIn}>
@@ -237,8 +239,12 @@ export default function SignUp() {
                     </FormControl.Feedback>
                   </FormGroup>
 
-                  <Button className="but" type="submit">
-                    Вход
+                  <FormGroup className="mb-3" controlId="formRules">
+                    
+                  </FormGroup>
+
+                  <Button style={{borderRadius:"50px"}} className="but" type="submit">
+                    Авторизация
                   </Button>
                 </Form>
               </Card.Body>
@@ -246,6 +252,13 @@ export default function SignUp() {
           </Col>
         </Row>
       </Container>
+
+      <section style={{marginTop: 1300}}>
+      <Footer />  
+      </section>
+    </div>
     </>
   );
 }
+
+
